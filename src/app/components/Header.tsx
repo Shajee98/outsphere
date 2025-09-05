@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { useState, useEffect, useRef } from 'react';
 
 export default function Header() {
@@ -100,10 +101,10 @@ export default function Header() {
                 <div className="header-topbar_wrap">
                   <div className="topbar_note">
                     <i className="tji-check"></i> Trusted partner in business excellence
-                    <a href="contact.html">
+                    <Link  href="contact.html">
                       <span>Join us now</span>
                       <i className="tji-angle-right"></i>
-                    </a>
+                    </Link>
                   </div>
                   <div className="topbar_infos">
                     <div className="info_item">
@@ -112,11 +113,11 @@ export default function Header() {
                     </div>
                     <div className="info_item">
                       <span><i className="tji-email"></i></span>
-                      <a href="mailto:support@solvior.com">support@solvior.com</a>
+                      <Link  href="mailto:support@solvior.com">support@solvior.com</Link >
                     </div>
                     <div className="info_item">
                       <span><i className="tji-phone"></i></span>
-                      <a href="tel:+1009544-7818">+1 (009) 544-7818</a>
+                      <Link  href="tel:+1009544-7818">+1 (009) 544-7818</Link >
                     </div>
                   </div>
                 </div>
@@ -131,64 +132,64 @@ export default function Header() {
                 <div className="header-wrapper">
                   {/* Logo */}
                   <div className="site-logo">
-                    <a className="logo" href="/">
+                    <Link  className="logo" href="/">
                       <img src="/images/logos/primary-logo.png" alt="logo" />
-                    </a>
+                    </Link >
                   </div>
 
                   {/* Main Navigation */}
                   <div className="mainmenu d-lg-block d-none" id="main-menu">
                     <ul>
                       <li className="has-dropdown current-menu-ancestor">
-                        <a href="/">Home</a>
+                        <Link  href="/">Home</Link >
                       </li>
                       <li className="has-dropdown">
-                        <a href="/services">Services</a>
+                        <Link  href="/services">Services</Link >
                       </li>
                       <li className="has-dropdown">
-                    <a href="services.html">Services</a>
+                    <Link  href="services.html">Services</Link >
                     <ul className="sub-menu  mega-menu-service">
-                      <li> <a className="mega-menu-service-single" href="service-details.html"> <span
+                      <li> <Link  className="mega-menu-service-single" href="service-details.html"> <span
                             className="mega-menu-service-icon">
                             <i className="tji-optimization"></i>
                           </span> <span className="mega-menu-service-title">Business process
                             optimization</span> <span className="mega-menu-service-nav"><i className="tji-arrow-right"></i><i
-                              className="tji-arrow-right"></i></span></a></li>
-                      <li> <a className="mega-menu-service-single" href="service-details.html"> <span
+                              className="tji-arrow-right"></i></span></Link ></li>
+                      <li> <Link  className="mega-menu-service-single" href="service-details.html"> <span
                             className="mega-menu-service-icon">
                             <i className="tji-strategic"></i>
                           </span> <span className="mega-menu-service-title">Strategic planning &
                             execution</span> <span className="mega-menu-service-nav"><i className="tji-arrow-right"></i><i
-                              className="tji-arrow-right"></i></span></a></li>
-                      <li> <a className="mega-menu-service-single" href="service-details.html"> <span
+                              className="tji-arrow-right"></i></span></Link ></li>
+                      <li> <Link  className="mega-menu-service-single" href="service-details.html"> <span
                             className="mega-menu-service-icon">
                             <i className="tji-leadership"></i>
                           </span> <span className="mega-menu-service-title">Leadership executive
                             coaching</span> <span className="mega-menu-service-nav"><i className="tji-arrow-right"></i><i
-                              className="tji-arrow-right"></i></span></a></li>
-                      <li> <a className="mega-menu-service-single" href="service-details.html"> <span
+                              className="tji-arrow-right"></i></span></Link ></li>
+                      <li> <Link  className="mega-menu-service-single" href="service-details.html"> <span
                             className="mega-menu-service-icon">
                             <i className="tji-business"></i>
                           </span> <span className="mega-menu-service-title">Business process
                             optimization</span> <span className="mega-menu-service-nav"><i className="tji-arrow-right"></i><i
-                              className="tji-arrow-right"></i></span></a></li>
-                      <li> <a className="mega-menu-service-single" href="service-details.html"> <span
+                              className="tji-arrow-right"></i></span></Link ></li>
+                      <li> <Link  className="mega-menu-service-single" href="service-details.html"> <span
                             className="mega-menu-service-icon">
                             <i className="tji-process"></i>
                           </span> <span className="mega-menu-service-title">Business process
                             optimization</span> <span className="mega-menu-service-nav"><i className="tji-arrow-right"></i><i
-                              className="tji-arrow-right"></i></span></a></li>
-                      <li> <a className="mega-menu-service-single" href="service-details.html"> <span
+                              className="tji-arrow-right"></i></span></Link ></li>
+                      <li> <Link  className="mega-menu-service-single" href="service-details.html"> <span
                             className="mega-menu-service-icon">
                             <i className="tji-executive"></i>
                           </span> <span className="mega-menu-service-title">Leadership executive
                             coaching</span> <span className="mega-menu-service-nav"><i className="tji-arrow-right"></i><i
-                              className="tji-arrow-right"></i></span></a></li>
+                              className="tji-arrow-right"></i></span></Link ></li>
 
                     </ul>
                   </li>
                   <li className="has-dropdown">
-                    <a href="javascript:void(0)">Pages</a>
+                    <Link  href="javascript:void(0)">Pages</Link >
                     <ul className="sub-menu header__mega-menu mega-menu mega-menu-pages">
                       <li>
                         <div className="mega-menu-wrapper">
@@ -197,17 +198,17 @@ export default function Header() {
                             <div className="mega-menu-pages-single-inner">
                               <h6 className="mega-menu-title">Main Pages</h6>
                               <div className="mega-menu-list">
-                                <a href="about.html">About us</a>
-                                <a href="history.html">Our history <span
-                                    className="mega-menu-badge mega-menu-badge-hot">HOT</span></a>
-                                <a href="team.html">Team</a>
-                                <a href="team-details.html">Team details</a>
-                                <a href="careers.html">Careers <span className="mega-menu-badge ">NEW</span></a>
-                                <a href="careers-details.html">Careers details</a>
-                                <a href="pricing.html">Pricing Plan</a>
-                                <a href="#">Feedbacks</a>
-                                <a href="faq.html">Faq</a>
-                                <a href="contact.html">Contact</a>
+                                <Link  href="about.html">About us</Link >
+                                <Link  href="history.html">Our history <span
+                                    className="mega-menu-badge mega-menu-badge-hot">HOT</span></Link >
+                                <Link  href="team.html">Team</Link >
+                                <Link  href="team-details.html">Team details</Link >
+                                <Link  href="careers.html">Careers <span className="mega-menu-badge ">NEW</span></Link >
+                                <Link  href="careers-details.html">Careers details</Link >
+                                <Link  href="pricing.html">Pricing Plan</Link >
+                                <Link  href="#">Feedbacks</Link >
+                                <Link  href="faq.html">Faq</Link >
+                                <Link  href="contact.html">Contact</Link >
 
 
                               </div>
@@ -218,16 +219,16 @@ export default function Header() {
                             <div className="mega-menu-pages-single-inner">
                               <h6 className="mega-menu-title">Other Pages</h6>
                               <div className="mega-menu-list">
-                                <a href="services.html">Services</a>
-                                <a href="service-details.html">Service details</a>
-                                <a href="project.html">Portfolio</a>
-                                <a href="project-details.html">Portfolio details</a>
-                                <a href="#">Error 404</a>
-                                <a href="blog.html">Blog grid <span className="mega-menu-badge ">NEW</span></a>
-                                <a href="blog.html">Blog Standard</a>
-                                <a href="blog-details.html">Blog details</a>
-                                <a href="#">Term & conditions</a>
-                                <a href="#">Recognition <span className="mega-menu-badge ">NEW</span></a>
+                                <Link  href="services.html">Services</Link >
+                                <Link  href="service-details.html">Service details</Link >
+                                <Link  href="project.html">Portfolio</Link >
+                                <Link  href="project-details.html">Portfolio details</Link >
+                                <Link  href="#">Error 404</Link >
+                                <Link  href="blog.html">Blog grid <span className="mega-menu-badge ">NEW</span></Link >
+                                <Link  href="blog.html">Blog Standard</Link >
+                                <Link  href="blog-details.html">Blog details</Link >
+                                <Link  href="#">Term & conditions</Link >
+                                <Link  href="#">Recognition <span className="mega-menu-badge ">NEW</span></Link >
 
 
                               </div>
@@ -238,18 +239,18 @@ export default function Header() {
                             <div className="mega-menu-pages-single-inner">
                               <h6 className="mega-menu-title">Shop Pages</h6>
                               <div className="mega-menu-list">
-                                <a href="shop.html">Shop <span
-                                    className="mega-menu-badge mega-menu-badge-hot">HOT</span></a>
-                                <a href="shop-details.html">Shop details </a>
-                                <a href="cart.html">Cart</a>
-                                <a href="checkout.html">Checkout</a>
-                                <a href="wishlist.html">Wishlist<span className="mega-menu-badge ">NEW</span></a>
-                                <a href="login.html">Login</a>
+                                <Link  href="shop.html">Shop <span
+                                    className="mega-menu-badge mega-menu-badge-hot">HOT</span></Link >
+                                <Link  href="shop-details.html">Shop details </Link >
+                                <Link  href="cart.html">Cart</Link >
+                                <Link  href="checkout.html">Checkout</Link >
+                                <Link  href="wishlist.html">Wishlist<span className="mega-menu-badge ">NEW</span></Link >
+                                <Link  href="login.html">Login</Link >
 
-                                <a href="#">Tracking</a>
-                                <a href="#">Order confirm</a>
-                                <a href="login.html">Registration</a>
-                                <a href="#">Coming soon</a>
+                                <Link  href="#">Tracking</Link >
+                                <Link  href="#">Order confirm</Link >
+                                <Link  href="login.html">Registration</Link >
+                                <Link  href="#">Coming soon</Link >
 
 
                               </div>
@@ -270,7 +271,7 @@ export default function Header() {
                                   </p>
                                 </div>
                                 <div className="cta-btn">
-                                  <a href="contact.html" className="tj-primary-btn white-btn">
+                                  <Link  href="contact.html" className="tj-primary-btn white-btn">
                                     <div className="btn_inner">
                                       <div className="btn_icon">
                                         <span>
@@ -280,7 +281,7 @@ export default function Header() {
                                       </div>
                                       <div className="btn_text"><span>Get in touch</span></div>
                                     </div>
-                                  </a>
+                                  </Link >
                                   <img className="shapes move-anim-2" src="/images/shapes/carrow.png" alt="shape" />
                                 </div>
                               </div>
@@ -292,28 +293,28 @@ export default function Header() {
                     </ul>
                   </li>
                   <li className="has-dropdown">
-                    <a href="project.html">Portfolio</a>
+                    <Link  href="project.html">Portfolio</Link >
                     <ul className="sub-menu">
-                      <li><a href="project.html">Portfolio</a></li>
-                      <li><a href="project-details.html">Portfolio details</a></li>
+                      <li><Link  href="project.html">Portfolio</Link ></li>
+                      <li><Link  href="project-details.html">Portfolio details</Link ></li>
                     </ul>
                   </li>
                   <li className="has-dropdown ">
-                    <a href="blog.html">Blog</a>
+                    <Link  href="blog.html">Blog</Link >
                     <ul className="sub-menu">
-                      <li><a href="blog.html">Blog standard</a></li>
-                      <li><a href="blog-grid.html">Blog grid</a></li>
-                      <li><a href="blog-with-sidebar.html">Blog with sidebar</a></li>
-                      <li><a href="blog-details.html">Blog details</a></li>
+                      <li><Link  href="blog.html">Blog standard</Link ></li>
+                      <li><Link  href="blog-grid.html">Blog grid</Link ></li>
+                      <li><Link  href="blog-with-sidebar.html">Blog with sidebar</Link ></li>
+                      <li><Link  href="blog-details.html">Blog details</Link ></li>
                     </ul>
                   </li>
-                  <li><a href="contact.html">Contact</a></li>
+                  <li><Link  href="contact.html">Contact</Link ></li>
                     </ul>
                   </div>
 
                   {/* Header Right Info */}
                   <div className="header_right_info d-none d-lg-inline-flex">
-                    <a href="/contact" className="tj-primary-btn header_btn d-none d-xl-flex">
+                    <Link  href="/contact" className="tj-primary-btn header_btn d-none d-xl-flex">
                       <div className="btn_inner">
                         <div className="btn_icon">
                           <span>
@@ -325,7 +326,7 @@ export default function Header() {
                           <span>Get a quote</span>
                         </div>
                       </div>
-                    </a>
+                    </Link >
                     <button 
                       className="header_search header_contact d-none d-lg-inline-flex"
                       onClick={toggleSearch}
@@ -412,9 +413,9 @@ export default function Header() {
         <div className="hamburger_wrapper">
           <div className="hamburger_top d-flex align-items-center justify-content-between">
             <div className="hamburger_logo">
-              <a href="/" className="mobile_logo">
+              <Link href="/" className="mobile_logo">
                 <img src="/images/logos/primary-logo.png" alt="Logo" />
-              </a>
+              </Link>
             </div>
             <div className="hamburger_close">
               <button className="hamburger_close_btn hamburgerCloseBtn" onClick={closeHamburger}>
@@ -434,22 +435,22 @@ export default function Header() {
             <div className="mobile_menu">
               <ul>
                 <li className="current-menu-ancestor">
-                  <a href="/home">Home</a>
+                  <Link  href="/home">Home</Link >
                 </li>
                 <li>
-                  <a href="/services">Services</a>
+                  <Link  href="/services">Services</Link >
                 </li>
                 <li>
-                  <a href="/about">About</a>
+                  <Link  href="/about">About</Link >
                 </li>
                 <li>
-                  <a href="/project">Portfolio</a>
+                  <Link  href="/project">Portfolio</Link >
                 </li>
                 <li>
-                  <a href="/blog">Blog</a>
+                  <Link  href="/blog">Blog</Link >
                 </li>
                 <li>
-                  <a href="/contact">Contact</a>
+                  <Link  href="/contact">Contact</Link >
                 </li>
               </ul>
             </div>
@@ -461,13 +462,13 @@ export default function Header() {
               <div className="contact_item">
                 <span className="subtitle">Email</span>
                 <div className="text">
-                  <a className="link" href="mailto:support@solvior.com">support@solvior.com</a>
+                  <Link  className="link" href="mailto:support@solvior.com">support@solvior.com</Link >
                 </div>
               </div>
               <div className="contact_item">
                 <span className="subtitle">Phone</span>
                 <div className="text">
-                  <a className="link" href="tel:000123456789">(000) 123 456 789</a>
+                  <Link  className="link" href="tel:000123456789">(000) 123 456 789</Link >
                 </div>
               </div>
               <div className="contact_item">
@@ -480,24 +481,24 @@ export default function Header() {
             <h4 className="hamburger-title">Follow us</h4>
             <ul>
               <li>
-                <a href="https://www.facebook.com/">
+                <Link  href="https://www.facebook.com/">
                   <i className="fa-brands fa-facebook-f"></i>
-                </a>
+                </Link >
               </li>
               <li>
-                <a href="https://www.instagram.com/">
+                <Link  href="https://www.instagram.com/">
                   <i className="fa-brands fa-instagram"></i>
-                </a>
+                </Link >
               </li>
               <li>
-                <a href="https://www.linkedin.com/">
+                <Link  href="https://www.linkedin.com/">
                   <i className="fa-brands fa-linkedin-in"></i>
-                </a>
+                </Link >
               </li>
               <li>
-                <a href="https://x.com/">
+                <Link  href="https://x.com/">
                   <i className="fa-brands fa-twitter"></i>
-                </a>
+                </Link >
               </li>
             </ul>
           </div>

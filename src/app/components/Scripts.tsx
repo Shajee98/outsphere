@@ -18,6 +18,7 @@ declare global {
     ScrollToPlugin?: any;
     SplitText?: any;
     TweenMax?: any;
+    smoothscrollPolyfill?: { polyfill: () => void }; // 👈 add this
   }
 }
 
@@ -767,13 +768,13 @@ export default function Scripts() {
       const $ = window.jQuery;
 
       // Data BG functionality
-      $("[data-bg-image]").each(function () {
+      $("[data-bg-image]").each(function (this: HTMLElement) {
         const $this = $(this);
         const $image = $this.data("bg-image");
         $this.css("background-image", "url(" + $image + ")");
       });
-
-      $("[data-mask]").each(function () {
+      
+      $("[data-mask]").each(function (this: HTMLElement) {
         const $this = $(this);
         const $mask_image = $this.data("mask");
         $this.css("mask-image", "url(" + $mask_image + ")");
@@ -812,7 +813,7 @@ export default function Scripts() {
         $(".search-popup-overlay").removeClass("opened");
       });
 
-      $(".search-popup-overlay").on("click", function () {
+      $(".search-popup-overlay").on("click", function (this: HTMLElement) {
         $(".search_popup").removeClass("search-opened");
         $(this).removeClass("opened");
       });
@@ -841,31 +842,35 @@ export default function Scripts() {
       // Process hover effects
       const processContainer = document.querySelector("#tj-process");
       if (processContainer) {
-        const processItems = processContainer?.querySelectorAll(".process-item");
-        const processLineActive = processContainer?.querySelector(".process-line-active");
-
-        if (processItems?.length) {
-          const totalPortion = 100 / processItems?.length;
+        const processItems = processContainer.querySelectorAll<HTMLElement>(".process-item");
+        const processLineActive = processContainer.querySelector<HTMLElement>(".process-line-active");
+      
+        if (processItems.length) {
+          const totalPortion = 100 / processItems.length;
           if (processLineActive) {
             processLineActive.style.left = "0";
             processLineActive.style.top = "0";
           }
+      
           processItems.forEach((item, idx) => {
-            item.addEventListener("mouseenter", function () {
+            item.addEventListener("mouseenter", function (this: HTMLElement) {
               processItems.forEach((item2) => {
                 item2.classList.remove("active");
               });
+      
               if (processLineActive) {
                 processLineActive.style.top = `${totalPortion * idx}%`;
               }
+      
               this.classList.add("active");
             });
           });
         }
       }
+      
 
       // Team hover effects
-      $(".h10-team-item").on("mouseover", function () {
+      $(".h10-team-item").on("mouseover", function (this: HTMLElement) {
         $(this).addClass("active").siblings().removeClass("active");
       });
     };
