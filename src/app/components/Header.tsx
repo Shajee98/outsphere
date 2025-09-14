@@ -40,23 +40,26 @@ export default function Header() {
     setIsSearchOpen(false);
   };
 
-  // Handle clicks outside search popup
+  // Handle clicks outside search popup (use 'click' to avoid same mousedown race)
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
-        setIsSearchOpen(false);
+      const target = event.target as Element | null;
+      // Ignore clicks on the trigger button
+      if (target && (target.closest('.header_search') || target.closest('.search_popup'))) {
+        return;
       }
+      if (isSearchOpen) setIsSearchOpen(false);
     };
 
     if (isSearchOpen) {
-      document.addEventListener('mousedown', handleClickOutside);
+      document.addEventListener('click', handleClickOutside);
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = '';
     }
 
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('click', handleClickOutside);
       document.body.style.overflow = '';
     };
   }, [isSearchOpen]);
@@ -365,7 +368,7 @@ export default function Header() {
 
       {/* Search Popup */}
       {isSearchOpen && (
-        <div className="search_popup" ref={searchRef}>
+        <div className="search_popup search-opened" ref={searchRef}>
           <div className="search_close">
             <button type="button" className="search_close_btn" onClick={closeSearch}>
               <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -405,6 +408,12 @@ export default function Header() {
           </div>
         </div>
       )}
+
+      {/* Search overlay (click to close) */}
+      <div
+        className={`search-popup-overlay ${isSearchOpen ? 'opened' : ''}`}
+        onClick={isSearchOpen ? closeSearch : undefined}
+      ></div>
 
       {/* Hamburger Menu Overlay */}
       <div className={`body-overlay ${isHamburgerOpen ? 'active' : ''}`}></div>
